@@ -70,7 +70,20 @@ The firmware files for Particle Photon is available from <a href="https://github
 
 <p>The Particle Photon enables registering a function that could be executed when a rollbar alert is received. For e.g.: A function called <code>triggerAlert</code>can be registered as follows:  </p>
 
-<p><code>bool success = Particle.function("trigger", triggerAlert);</code></p>
+<p><code>bool success = Particle.function("trigger", triggerAlert);</code>  </p>
+
+<p>The string <code>trigger</code> is used to make a POST request to the Particle API. The function <code>triggerAlert</code> is used to set a flag that is used to control the behavior of the lamp: </p>
+
+<p><code>
+int triggerAlert(String command){
+    if(command == "triggered"){
+        if(true){
+            triggerReceived = true;
+            return 1;
+        }
+    }
+    return -1;
+}</code></p>
 
 <p>When there are no rollbar alerts, the lamp glows white:  </p>
 
