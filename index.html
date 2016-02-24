@@ -87,18 +87,18 @@ The firmware files for Particle Photon is available from <a href="https://github
 
 <p>The main thread on the Particle Photon keeps checking for this flag and changes its behavior accordingly:</p>
 
-<pre><code>    if(triggerReceived){
-        for(int i=0;i&lt;25;i++){
-            colorWipe(strip.Color(255, 0, 0), 50); // Red
-            colorWipe(strip.Color(0, 0, 0), 50); // Off
-        }
-        triggerReceived = false;
-    }else{
-        for(int i=0;i&lt;2;i++){
-            colorWipe(strip.Color(255, 255, 255), 50); // White
-            colorWipe(strip.Color(0, 0, 0), 50); // Off
-        }
+<pre><code>if(triggerReceived){
+    for(int i=0;i&lt;25;i++){
+        colorWipe(strip.Color(255, 0, 0), 50); // Red
+        colorWipe(strip.Color(0, 0, 0), 50); // Off
     }
+    triggerReceived = false;
+}else{
+    for(int i=0;i&lt;2;i++){
+        colorWipe(strip.Color(255, 255, 255), 50); // White
+        colorWipe(strip.Color(0, 0, 0), 50); // Off
+    }
+}
 </code></pre>
 
 <p>When there are no rollbar alerts, the lamp glows white:  </p>
