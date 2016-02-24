@@ -105,6 +105,18 @@ The firmware files for Particle Photon is available from <a href="https://github
 
 <p><img src="http://i.imgur.com/fc4jrqk.jpg" alt=""> <img src="http://i.imgur.com/xgCMGtR.jpg" alt=""></p>
 
+<p>A trigger could be sent to the Particle Photon in the following format:  </p>
+
+<pre><code>https://api.particle.io/v1/devices/{DEVICE_ID}/trigger
+
+</code></pre>
+
+<p>The body of the request should contain the arguments to the <code>trigger</code> function and the <code>access_token</code>:</p>
+
+<pre><code>args=triggered&amp;access_token=44614d95201bbf22a0c421acc10f85ed5ba11186
+
+</code></pre>
+
 <h2>
 <a id="setting-up-rollbar-webhooks" class="anchor" href="#setting-up-rollbar-webhooks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up Rollbar webhooks</h2>
 
