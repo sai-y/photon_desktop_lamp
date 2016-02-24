@@ -46,6 +46,11 @@
 </ol>
 
 <h2>
+<a id="enclosure-print" class="anchor" href="#enclosure-print" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Enclosure print:</h2>
+
+<p>The enclosure + lamp shade could be printed using 3D printing services like <a href="https://www.3dhubs.com/">3D Hubs</a>. </p>
+
+<h2>
 <a id="particle-photon---firmware--setup" class="anchor" href="#particle-photon---firmware--setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Particle Photon - Firmware + Setup</h2>
 
 <p>The Particle Photon has to be setup to receive rollbar alerts. This includes adding the <a href="https://docs.particle.io/guide/getting-started/start/photon/">WiFi credentials</a> to the Photon. 
@@ -121,9 +126,20 @@ The firmware files for Particle Photon is available from <a href="https://github
 <p>The alert could be sent to a Particle Photon using Rollbar's webhook notification option. 
 <img src="http://i.imgur.com/fMsafqZ.jpg" alt=""></p>
 
+<p>Rollbar provides a rule engine to send triggers to a specific event. Once the rule to send an alert is configured, it is time to send a test notification.  </p>
+
 <p>When there are no rollbar alerts, the lamp glows white:  </p>
 
 <p><img src="http://i.imgur.com/2F0I7H2.gif" alt=""></p>
+
+<p>When an error notification is received, the lamp sends in a red sweep for about 30 seconds:  </p>
+
+<p><img src="http://i.imgur.com/Niz8BHJ.gif" alt=""></p>
+
+<h2>
+<a id="customization-of-alerts" class="anchor" href="#customization-of-alerts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customization of alerts:</h2>
+
+<p>It is possible to customize this lamp based alerting tool with a reset button. The code could be tweaked to make the lamp reset its behavior only if the error is resolved. This alerting tool could be used to track the number of days since the last error on a digital sign. </p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/sai-y/photon_desktop_lamp">The Rollbar alert lamp</a> is maintained by <a href="https://github.com/sai-y">sai-y</a>.</span>
