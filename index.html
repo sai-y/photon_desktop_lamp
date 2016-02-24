@@ -74,15 +74,16 @@ The firmware files for Particle Photon is available from <a href="https://github
 
 <p>The string <code>trigger</code> is used to make a POST request to the Particle API. The function <code>triggerAlert</code> is used to set a flag that is used to control the behavior of the lamp: </p>
 
-<pre><code>     int triggerAlert(String command){
-        if(command == "triggered"){
-            if(true){
-                triggerReceived = true;
-                return 1;
-            }
+<pre><code>// this is the function that is called when a trigger is received 
+int triggerAlert(String command){
+    if(command == "triggered"){
+        if(true){
+            triggerReceived = true;
+            return 1;
         }
-        return -1;
-    }  
+    }
+    return -1;
+}  
 </code></pre>
 
 <p>When there are no rollbar alerts, the lamp glows white:  </p>
