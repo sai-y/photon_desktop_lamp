@@ -74,7 +74,10 @@ The firmware files for Particle Photon is available from <a href="https://github
 
 <p>The string <code>trigger</code> is used to make a POST request to the Particle API. The function <code>triggerAlert</code> is used to set a flag that is used to control the behavior of the lamp: </p>
 
-<pre><code>int triggerAlert(String command){
+<pre><code> // this is the function that is called when a trigger is received 
+</code></pre>
+
+<p>int triggerAlert(String command){
     if(command == "triggered"){
         if(true){
             triggerReceived = true;
@@ -82,25 +85,21 @@ The firmware files for Particle Photon is available from <a href="https://github
         }
     }
     return -1;
-}```
+}</p>
 
+<p>When there are no rollbar alerts, the lamp glows white:  </p>
 
+<p><img src="http://i.imgur.com/2F0I7H2.gif" alt=""></p>
 
+<p>In order to trigger the Particle Photon for an alert, the device id and an access token is necessary. This information is available at <a href="https://docs.particle.io/guide/getting-started/intro/photon/">particle.io</a></p>
 
+<p><img src="http://i.imgur.com/fc4jrqk.jpg" alt=""> <img src="http://i.imgur.com/xgCMGtR.jpg" alt=""></p>
 
-When there are no rollbar alerts, the lamp glows white:  
+<h2>
+<a id="setting-up-rollbar-webhooks" class="anchor" href="#setting-up-rollbar-webhooks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up Rollbar webhooks</h2>
 
-![](http://i.imgur.com/2F0I7H2.gif)
-
-In order to trigger the Particle Photon for an alert, the device id and an access token is necessary. This information is available at [particle.io](https://docs.particle.io/guide/getting-started/intro/photon/)
-
-![](http://i.imgur.com/fc4jrqk.jpg) ![](http://i.imgur.com/xgCMGtR.jpg)
-
-## Setting up Rollbar webhooks
-
-The alert could be sent to a Particle Photon using Rollbar's webhook notification option. 
-![](http://i.imgur.com/fMsafqZ.jpg)
-</code></pre>
+<p>The alert could be sent to a Particle Photon using Rollbar's webhook notification option. 
+<img src="http://i.imgur.com/fMsafqZ.jpg" alt=""></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/sai-y/photon_desktop_lamp">The Rollbar alert lamp</a> is maintained by <a href="https://github.com/sai-y">sai-y</a>.</span>
