@@ -46,7 +46,7 @@
 </ol>
 
 <h2>
-<a id="particle-photon" class="anchor" href="#particle-photon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Particle Photon</h2>
+<a id="particle-photon---firmware--setup" class="anchor" href="#particle-photon---firmware--setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Particle Photon - Firmware + Setup</h2>
 
 <p>The Particle Photon has to be setup to receive rollbar alerts. This includes adding the <a href="https://docs.particle.io/guide/getting-started/start/photon/">WiFi credentials</a> to the Photon. 
 The firmware files for Particle Photon is available from <a href="https://github.com/sai-y/photon_desktop_lamp/tree/master/firmware">here</a>. This <a href="https://docs.particle.io/guide/getting-started/build/photon/">tutorial</a> explains compiling the code and flashing it on the Photon.  </p>
@@ -56,12 +56,19 @@ The firmware files for Particle Photon is available from <a href="https://github
 <ol>
 <li>Controlling the neopixel<br>
 </li>
-<li>Receiving incoming alerts from the cloud.<br>
+<li>Receiving incoming alerts from the web.<br>
 </li>
 </ol>
 
 <h3>
 <a id="controlling-the-neopixel" class="anchor" href="#controlling-the-neopixel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controlling the neopixel:</h3>
+
+<p>There are libraries from Adafruit to control the neopixel using the Particle Photon. This firmware used to build this lamp was based on one of the examples available with the library.  </p>
+
+<h3>
+<a id="receiving-incoming-alerts-from-the-web" class="anchor" href="#receiving-incoming-alerts-from-the-web" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Receiving incoming alerts from the web:</h3>
+
+<p>The Particle Photon enables registering a function that could be executed when a rollbar alert is received. For e.g.: A function called <code>triggerAlert</code></p>
 
 <p>When there are no rollbar alerts, the lamp glows white:  </p>
 
