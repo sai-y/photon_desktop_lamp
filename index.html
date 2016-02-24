@@ -45,17 +45,23 @@
 <a href="https://www.adafruit.com/products/2268">24 pixel Neopixel ring</a>. </li>
 </ol>
 
-<h3>
-<a id="particle-photon" class="anchor" href="#particle-photon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Particle Photon</h3>
+<h2>
+<a id="particle-photon" class="anchor" href="#particle-photon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Particle Photon</h2>
 
 <p>The Particle Photon has to be setup to receive rollbar alerts. This includes adding the <a href="https://docs.particle.io/guide/getting-started/start/photon/">WiFi credentials</a> to the Photon. 
 The firmware files for Particle Photon is available from <a href="https://github.com/sai-y/photon_desktop_lamp/tree/master/firmware">here</a>. This <a href="https://docs.particle.io/guide/getting-started/build/photon/">tutorial</a> explains compiling the code and flashing it on the Photon.  </p>
 
-<p>The firmware consists of two major components: 
-1. Controlling the neopixel<br>
-2. Receiving incoming alerts from the cloud.  </p>
+<p>The firmware consists of two major components:   </p>
 
-<p>*<em>Controlling the neopixel: *</em></p>
+<ol>
+<li>Controlling the neopixel<br>
+</li>
+<li>Receiving incoming alerts from the cloud.<br>
+</li>
+</ol>
+
+<h3>
+<a id="controlling-the-neopixel" class="anchor" href="#controlling-the-neopixel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controlling the neopixel:</h3>
 
 <p>When there are no rollbar alerts, the lamp glows white:  </p>
 
@@ -65,8 +71,8 @@ The firmware files for Particle Photon is available from <a href="https://github
 
 <p><img src="http://i.imgur.com/fc4jrqk.jpg" alt=""> <img src="http://i.imgur.com/xgCMGtR.jpg" alt=""></p>
 
-<h3>
-<a id="setting-up-rollbar-webhooks" class="anchor" href="#setting-up-rollbar-webhooks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up Rollbar webhooks</h3>
+<h2>
+<a id="setting-up-rollbar-webhooks" class="anchor" href="#setting-up-rollbar-webhooks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up Rollbar webhooks</h2>
 
 <p>The alert could be sent to a Particle Photon using Rollbar's webhook notification option. 
 <img src="http://i.imgur.com/fMsafqZ.jpg" alt=""></p>
