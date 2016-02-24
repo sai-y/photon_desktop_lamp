@@ -68,7 +68,9 @@ The firmware files for Particle Photon is available from <a href="https://github
 <h3>
 <a id="receiving-incoming-alerts-from-the-web" class="anchor" href="#receiving-incoming-alerts-from-the-web" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Receiving incoming alerts from the web:</h3>
 
-<p>The Particle Photon enables registering a function that could be executed when a rollbar alert is received. For e.g.: A function called <code>triggerAlert</code></p>
+<p>The Particle Photon enables registering a function that could be executed when a rollbar alert is received. For e.g.: A function called <code>triggerAlert</code>can be registered as follows:  </p>
+
+<p><code>bool success = Particle.function("trigger", triggerAlert);</code></p>
 
 <p>When there are no rollbar alerts, the lamp glows white:  </p>
 
