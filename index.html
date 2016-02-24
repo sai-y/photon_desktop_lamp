@@ -87,7 +87,7 @@ The firmware files for Particle Photon is available from <a href="https://github
 
 <p>The main thread on the Particle Photon keeps checking for this flag and changes its behavior accordingly:</p>
 
-<pre><code>if(triggerReceived){
+<pre><code>    if(triggerReceived){
         for(int i=0;i&lt;25;i++){
             colorWipe(strip.Color(255, 0, 0), 50); // Red
             colorWipe(strip.Color(0, 0, 0), 50); // Off
